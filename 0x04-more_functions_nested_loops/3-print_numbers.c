@@ -6,13 +6,13 @@
  * Return: Always 0.
  */
 
-
 void print_numbers(void)
 {
-int n;
-for (n = 0; n <= 9; n++)
+int c;
+
+for (c = 48; c < 58; c++)
 {
-_putchar(n);
+_putchar(c);
 }
 _putchar('\n');
 }
