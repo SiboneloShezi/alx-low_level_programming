@@ -12,7 +12,7 @@ else
 {
 int a, d;
 
-for (a = 0; a < a; i++)
+for (a = 0; a < a; a++)
 {
 for (d = 0; d < n; d++)
 {
