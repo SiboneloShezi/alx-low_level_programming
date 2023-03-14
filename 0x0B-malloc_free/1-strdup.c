@@ -14,7 +14,7 @@ int a, r = 0;
 if (str == NULL)
 return (NULL);
 a = 0;
-while (str[i] != '\0')
+while (str[a] != '\0')
 a++;
 
 abc = malloc(sizeof(char) * (a + 1));
