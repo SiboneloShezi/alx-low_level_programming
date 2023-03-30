@@ -1,44 +1,44 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
+#include "main.h"
+
 /**
-* check_num - check - string there are digit
-* @str: array str
-*
-* Return: Always 0 (Success)
-*/
-int check_num(char *str)
+ * main - prints the minimum number of coins to
+ * make change for an amount of money
+ * @argc: number of arguments
+ * @argv: array of arguments
+ *
+ * Return: 0 (Success), 1 (Error)
+ */
+int main(int argc, char *argv[])
 {
-/*Declaring variables*/
-unsigned int count;
+int num, j, result;
+int coins[] = {25, 10, 5, 2, 1};
 
-count = 0;
-while (count < strlen(str)) /*count string*/
-
+if (argc != 2)
 {
-if (!isdigit(str[count])) /*check if str there are digit*/
-{
-return (0);
-}
-
-count++;
-}
+printf("Error\n");
 return (1);
 }
 
-/**
-* main - Print the name of the program
-* @argc: Count arguments
-* @argv: Arguments
-*
-* Return: Always 0 (Success)
-*/
+num = atoi(argv[1]);
+result = 0;
 
-int main(int argc, char *argv[])
-
+if (num < 0)
 {
+printf("0\n");
+return (0);
+}
 
-/*Declaring variables*/
-int count;
-int str_to_int;
+for (j = 0; j < 5 && num >= 0; j++)
+{
+while (num >= coins[j])
+{
+result++;
+num -= coins[j];
+}
+}
+
+printf("%d\n", result);
+return (0);
+}
