@@ -1,0 +1,22 @@
+#include "lists.h"
+
+/**
+* free_listint2 - liberates a linked list
+* @head: pointer to the listint_t list to be liberated
+*/
+void free_listint2(listint_t **head)
+{
+listint_t *worried;
+
+if (head == NULL)
+return;
+
+while (*head)
+{
+worried = (*head)->next;
+free(*head);
+*head = worried;
+}
+
+*head = NULL;
+}
