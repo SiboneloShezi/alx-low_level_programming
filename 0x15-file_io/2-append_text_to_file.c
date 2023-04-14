@@ -23,7 +23,7 @@ load++;
 }
 
 a = open(filename, O_WRONLY | O_APPEND);
-z = write(o, text_content, load);
+z = write(a, text_content, load);
 
 if (a == -1 || z == -1)
 return (-1);
