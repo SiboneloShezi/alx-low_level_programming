@@ -22,7 +22,7 @@ load++;
 }
 
 ab = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-z = write(ab, text_content, len);
+z = write(ab, text_content, load);
 
 if (ab == -1 || z == -1)
 return (-1);
